@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Bogor",
+    "main": {
+      "temp": 29.35,
+      "humidity": 85
+    },
+    "weather": [
+      {
+        "description": "scattered clouds"
+      }
+    ],
+    "timezone": 25200,
+    "GMT": "GMT+7"
+  },
+  {
+    "name": "Bandung",
+    "main": {
+      "temp": 26.1,
+      "humidity": 83
+    },
+    "weather": [
+      {
+        "description": "scattered clouds"
+      }
+    ],
+    "timezone": 25200,
+    "GMT": "GMT+7"
+  },
+  {
+    "name": "Gorontalo",
+    "main": {
+      "temp": 27.74,
+      "humidity": 80
+    },
+    "weather": [
+      {
+        "description": "scattered clouds"
+      }
+    ],
+    "timezone": 28800,
+    "GMT": "GMT+8"
+  }
+]
