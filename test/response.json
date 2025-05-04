@@ -1,44 +1,32 @@
 [
   {
-    "name": "Bogor",
+    "name": "",
     "main": {
-      "temp": 29.35,
-      "humidity": 85
+      "temp": 0,
+      "humidity": 0
     },
-    "weather": [
-      {
-        "description": "scattered clouds"
-      }
-    ],
-    "timezone": 25200,
-    "GMT": "GMT+7"
+    "weather": null,
+    "timezone": 0,
+    "GMT": "GMT+0"
   },
   {
-    "name": "Bandung",
+    "name": "",
     "main": {
-      "temp": 26.1,
-      "humidity": 83
+      "temp": 0,
+      "humidity": 0
     },
-    "weather": [
-      {
-        "description": "scattered clouds"
-      }
-    ],
-    "timezone": 25200,
-    "GMT": "GMT+7"
+    "weather": null,
+    "timezone": 0,
+    "GMT": "GMT+0"
   },
   {
-    "name": "Gorontalo",
+    "name": "",
     "main": {
-      "temp": 27.74,
-      "humidity": 80
+      "temp": 0,
+      "humidity": 0
     },
-    "weather": [
-      {
-        "description": "scattered clouds"
-      }
-    ],
-    "timezone": 28800,
-    "GMT": "GMT+8"
+    "weather": null,
+    "timezone": 0,
+    "GMT": "GMT+0"
   }
 ]

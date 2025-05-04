@@ -9,18 +9,37 @@ import (
 
 func TestGetWeather(t *testing.T) {
 	api.GetWeather(entity.City{
+		Location: []struct {
 			NameCity string `json:"name_city"`
 		}{
 			{
+				NameCity: "Purwakarta",
+			},
+			{
+				NameCity: "Purbalingga",
+			},
+			{
 				NameCity: "Bogor",
 			},
+		},
+	})
+}
+
+
+func TestBlankCity(t *testing.T)  {
+	api.GetWeather(entity.City{
+		Location: []struct {
+			NameCity string `json:"name_city"`
+		}{
 			{
-				NameCity: "Bandung",
+				NameCity: "",
 			},
 			{
-				NameCity: "Gorontalo",
+				NameCity: "",
 			},
-		},Location: []struct {
-		
+			{
+				NameCity: "",
+			},
+		},
 	})
 }
