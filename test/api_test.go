@@ -43,3 +43,21 @@ func TestBlankCity(t *testing.T)  {
 		},
 	})
 }
+
+func TestNotFoundCity(t *testing.T)  {
+	api.GetWeather(entity.City{
+		Location: []struct {
+			NameCity string `json:"name_city"`
+		}{
+			{
+				NameCity: "qwerty",
+			},
+			{
+				NameCity: "gotham",
+			},
+			{
+				NameCity: "HanifEly",
+			},
+		},
+	})
+}

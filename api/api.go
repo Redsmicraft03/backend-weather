@@ -25,25 +25,9 @@ func GetWeather(city entity.City) {
 
 	for _, city := range city.Location {
 		urls = append(urls, fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&units=metric", city.NameCity, apiKey))
-		// resp, err := http.Get(urls[i])
-
-		// if err != nil {
-		// 	log.Fatal(err)
-		// }
-
-		// defer resp.Body.Close()
-
-		// if len(weatherData) > 0 {
-		// 	// weatherData = append(weatherData, entity.WeatherData{})
-		// 	err = json.NewDecoder(resp.Body).Decode(&weatherData)
-		// 	if err != nil {
-		// 		log.Fatal(err)
-		// 	}
-		// }
-
 	}
 
-	for _, url := range urls {
+	for i, url := range urls {
 		resp, err := http.Get(url)
 		if err != nil {
 			log.Fatal(err)
@@ -54,8 +38,18 @@ func GetWeather(city entity.City) {
 		if err != nil {
 			log.Fatal(err)
 		}
-		weatherData.GMT = fmt.Sprintf("GMT+%d", weatherData.TimeZone/3600)
-		allWeatherData = append(allWeatherData, weatherData)
+
+		if resp.StatusCode == http.StatusNotFound {
+			weatherData := entity.WeatherData{
+				Name: city.Location[i].NameCity,
+				Error: "City not found",
+			}
+			allWeatherData = append(allWeatherData, weatherData)
+		} else {
+			weatherData.GMT = fmt.Sprintf("GMT+%d", weatherData.TimeZone/3600)
+			allWeatherData = append(allWeatherData, weatherData)
+		}
+
 	}
 
 	file, err := os.Create("response.json")
