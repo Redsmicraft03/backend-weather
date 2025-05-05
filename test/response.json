@@ -1,26 +1,17 @@
 [
   {
-    "name": "qwerty",
-    "error": "City not found",
-    "main": {}
+    "name": "",
+    "main": {},
+    "gmt": "GMT+0"
   },
   {
-    "name": "Gotham",
-    "main": {
-      "temp": 7.22,
-      "humidity": 81
-    },
-    "weather": [
-      {
-        "description": "broken clouds"
-      }
-    ],
-    "timezone": 3600,
-    "gmt": "GMT+1"
+    "name": "",
+    "main": {},
+    "gmt": "GMT+0"
   },
   {
-    "name": "HanifEly",
-    "error": "City not found",
-    "main": {}
+    "name": "",
+    "main": {},
+    "gmt": "GMT+0"
   }
 ]
