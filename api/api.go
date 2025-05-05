@@ -39,10 +39,10 @@ func GetWeather(city entity.City) {
 			log.Fatal(err)
 		}
 
-		if city.Location[i].NameCity == "" {
-			os.Create("isi-kota-lu-bambang.json")
-			return
-		}
+		// if city.Location[i].NameCity == "" {
+		// 	os.Create("isi-kota-lu-bambang.json")
+		// 	return
+		// }
 
 		if resp.StatusCode == http.StatusNotFound {
 			weatherData := entity.WeatherData{
