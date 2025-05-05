@@ -1,17 +1,35 @@
 [
   {
-    "name": "",
-    "main": {},
-    "gmt": "GMT+0"
+    "name": "Purwakarta",
+    "main": {
+      "temp": 35.41,
+      "humidity": 59
+    },
+    "weather": [
+      {
+        "description": "overcast clouds"
+      }
+    ],
+    "timezone": 25200,
+    "gmt": "GMT+7"
   },
   {
-    "name": "",
-    "main": {},
-    "gmt": "GMT+0"
+    "name": "Purbalingga",
+    "main": {
+      "temp": 30.47,
+      "humidity": 73
+    },
+    "weather": [
+      {
+        "description": "overcast clouds"
+      }
+    ],
+    "timezone": 25200,
+    "gmt": "GMT+7"
   },
   {
-    "name": "",
-    "main": {},
-    "gmt": "GMT+0"
+    "name": "isi kota nya bambang",
+    "error": "City not found",
+    "main": {}
   }
 ]

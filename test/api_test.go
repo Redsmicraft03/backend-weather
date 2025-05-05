@@ -19,7 +19,7 @@ func TestGetWeather(t *testing.T) {
 				NameCity: "Purbalingga",
 			},
 			{
-				NameCity: "Bogor",
+				NameCity: "",
 			},
 		},
 	})
