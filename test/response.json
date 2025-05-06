@@ -2,8 +2,8 @@
   {
     "name": "Purwakarta",
     "main": {
-      "temp": 35.41,
-      "humidity": 59
+      "temp": 34.49,
+      "humidity": 66
     },
     "weather": [
       {
@@ -16,8 +16,8 @@
   {
     "name": "Purbalingga",
     "main": {
-      "temp": 30.47,
-      "humidity": 73
+      "temp": 32.17,
+      "humidity": 91
     },
     "weather": [
       {
@@ -29,6 +29,11 @@
   },
   {
     "name": "isi kota nya bambang",
+    "error": "City not found",
+    "main": {}
+  },
+  {
+    "name": "qwert",
     "error": "City not found",
     "main": {}
   }

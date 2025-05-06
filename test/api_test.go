@@ -21,6 +21,9 @@ func TestGetWeather(t *testing.T) {
 			{
 				NameCity: "",
 			},
+			{
+				NameCity: "qwert",
+			},
 		},
 	})
 }
