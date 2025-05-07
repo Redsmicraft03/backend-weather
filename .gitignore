@@ -1,3 +1,15 @@
+.idea
+.vscode
+
+*test*
+bin
+venv
+build
+dist
+out
+__pycache__
+
 .env
-catatan.txt
-test.json
+*.txt
+*test*.*
+*.spec
