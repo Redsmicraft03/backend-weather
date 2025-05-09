@@ -3,11 +3,13 @@
 
 *test*
 bin
+app
 venv
 build
 dist
 out
 __pycache__
+resources
 
 .env
 *.txt
