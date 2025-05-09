@@ -35,13 +35,7 @@ func TestBlankCity(t *testing.T)  {
 			NameCity string `json:"name_city"`
 		}{
 			{
-				NameCity: "",
-			},
-			{
-				NameCity: "",
-			},
-			{
-				NameCity: "",
+				NameCity: "New York",
 			},
 		},
 	})

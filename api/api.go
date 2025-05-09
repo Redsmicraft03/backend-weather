@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 
 	"github.com/Redsmicraft03/backend-weather/entity"
@@ -22,8 +23,10 @@ func GetWeather(city entity.City) {
 	var urls []string
 	var weatherData entity.WeatherData
 	var allWeatherData []entity.WeatherData
+	var gmt int
 
 	for _, city := range city.Location {
+		city.NameCity = url.QueryEscape(city.NameCity)
 		urls = append(urls, fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&units=metric", city.NameCity, apiKey))
 	}
 
@@ -41,18 +44,23 @@ func GetWeather(city entity.City) {
 
 		if resp.StatusCode == http.StatusNotFound {
 			weatherData := entity.WeatherData{
-				Name: city.Location[i].NameCity,
+				Name:  city.Location[i].NameCity,
 				Error: "City not found",
 			}
 			allWeatherData = append(allWeatherData, weatherData)
 		} else if city.Location[i].NameCity == "" {
 			weatherData := entity.WeatherData{
-				Name: "isi kota nya bambang",
+				Name:  "isi kota nya bambang",
 				Error: "City not found",
 			}
 			allWeatherData = append(allWeatherData, weatherData)
-		}else {
-			weatherData.GMT = fmt.Sprintf("GMT+%d", weatherData.TimeZone/3600)
+		} else {
+			gmt = weatherData.TimeZone / 3600
+			if gmt < 0 {
+				weatherData.GMT = fmt.Sprintf("GMT%d", gmt)
+			} else {
+				weatherData.GMT = fmt.Sprintf("GMT+%d", gmt)
+			}
 			allWeatherData = append(allWeatherData, weatherData)
 		}
 

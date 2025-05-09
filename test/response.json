@@ -1,40 +1,16 @@
 [
   {
-    "name": "Purwakarta",
+    "name": "New York",
     "main": {
-      "temp": 34.49,
-      "humidity": 66
+      "temp": 14.67,
+      "humidity": 88
     },
     "weather": [
       {
         "description": "overcast clouds"
       }
     ],
-    "timezone": 25200,
-    "gmt": "GMT+7"
-  },
-  {
-    "name": "Purbalingga",
-    "main": {
-      "temp": 32.17,
-      "humidity": 91
-    },
-    "weather": [
-      {
-        "description": "overcast clouds"
-      }
-    ],
-    "timezone": 25200,
-    "gmt": "GMT+7"
-  },
-  {
-    "name": "isi kota nya bambang",
-    "error": "City not found",
-    "main": {}
-  },
-  {
-    "name": "qwert",
-    "error": "City not found",
-    "main": {}
+    "timezone": -14400,
+    "gmt": "GMT-4"
   }
 ]
